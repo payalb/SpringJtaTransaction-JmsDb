@@ -12,28 +12,5 @@ public class SpringTwoPhaseCommitApplication {
 		SpringApplication.run(SpringTwoPhaseCommitApplication.class, args);
 	}
 
-	/*@Bean(name="AtomikosTransactionManager",initMethod = "init", destroyMethod = "close")
-	public UserTransactionManager transactionManager() {
-		UserTransactionManager tx = new UserTransactionManager();
-		tx.setStartupTransactionService(false);
-		tx.setForceShutdown(false);
-		AtomikosJtaPlatform.transactionManager = tx;
-		return tx;
-	}
 
-	@Bean("AtomikosUserTransaction")
-	public UserTransactionImp transactionImpl() {
-		UserTransactionImp imp = new UserTransactionImp();
-		AtomikosJtaPlatform.transaction = imp;
-		return imp;
-	}
-
-	@Bean("transactionManager")
-	public JtaTransactionManager jtamanager() {
-		JtaTransactionManager tx = new JtaTransactionManager();
-		tx.setTransactionManager(transactionManager());
-		tx.setUserTransaction(transactionImpl());
-		tx.setDefaultTimeout(3000);
-		return tx;
-	}*/
 }
